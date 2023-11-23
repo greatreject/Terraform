@@ -4,7 +4,7 @@ resource "aws_instance" "my_ec2_instance_ssm" {
   instance_type        = var.instance_type  # Set your desired instance type
   subnet_id            = var.subnet_id
   key_name             = var.key_pair
-  ami                  = "ami-0d67743feaea944bf"  # Update with the desired AMI ID
+  ami                  = var.ami  # Update with the desired AMI ID
   
   user_data = <<-EOF
   <powershell>
