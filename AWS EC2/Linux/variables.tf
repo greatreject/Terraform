@@ -4,6 +4,8 @@ variable "subnet_id" {}
 
 variable "key_pair" {}
 
+variable ami {}
+
 variable "instance_type" {
     type = string
 }

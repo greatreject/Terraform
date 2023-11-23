@@ -4,7 +4,7 @@ resource "aws_instance" "linux_deploy" {
   instance_type        = var.instance_type  # Set your desired instance type
   subnet_id            = var.subnet_id
   key_name             = var.key_pair
-  ami                  = "ami-0cfd0973db26b893b"  # Update with the desired AMI ID
+  ami                  = var.ami  # Update with the desired AMI ID
   
   user_data = <<-EOF
   #!/bin/bash
